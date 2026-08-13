@@ -50,3 +50,35 @@ function removeDuplicates(arr) {
 
 console.log(removeDuplicates([1, 1, 2, 2, 3]))
 ```
+
+The Key Insight — "Tracking"
+right is exploring — it looks at every single element, no matter what.
+left is tracking progress — it only advances when something new/valid is found, and it marks where to write the next good value.
+
+So left isn't wasting time re-checking things — it's simply a bookmark that says "this is how far we've built our valid result so far." The gap between left and right is basically "stuff we've already looked at and decided to throw away."
+
+Another Common Use: Move Zeroes to the End
+```javascript
+function moveZeroes(arr) {
+  let left = 0; // tracks where the next non-zero should go
+
+  for (let right = 0; right < arr.length; right++) {
+    if (arr[right] !== 0) {
+      [arr[left], arr[right]] = [arr[right], arr[left]]; // swap
+      left++; // advance the tracker since we placed a valid value
+    }
+  }
+
+  return arr;
+}
+
+console.log(moveZeroes([0, 1, 0, 3, 12])); // [1, 3, 12, 0, 0]
+```
+Same pattern: right scans everything, left only moves when it finds a non-zero — because left marks "the next empty slot for a good value."
+
+### The Mental Model
+
+| Pointer | Role | Moves when... |
+|---|---|---|
+| `right` (scout) | Explores every element | Every single iteration |
+| `left` (tracker) | Remembers/marks the boundary of valid results | Only when something worthy is found |
