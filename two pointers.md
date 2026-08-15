@@ -27,8 +27,8 @@ In unidirectional traversal, both pointers start at the same spot (usually index
 
 Think of it like this:  
 
-Right pointer (i) = the scout. It walks through the whole array, examining every element one by one.
-Left pointer (j) = the record-keeper. It only moves when the scout finds something worth keeping. It marks the position where the next "valid" value should be placed.
+- Right pointer (i) = the scout. It walks through the whole array, examining every element one by one.
+- Left pointer (j) = the record-keeper. It only moves when the scout finds something worth keeping. It marks the position where the next "valid" value should be placed.
 
 The left pointer is basically saying: "Everything before me is confirmed good. I'm the boundary between what's finished and what's still being checked."
 
