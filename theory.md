@@ -4,3 +4,5 @@ all pieces of hardware. Measuring the number of steps is therefore the key to
 analyzing the speed of an operation.
 - **Measuring the speed of an operation is also known as measuring its time
 complexity**
+- Analyzing the number of steps that an operation takes is the heart of under
+standing the performance of data structures.
