@@ -1,7 +1,9 @@
 ### O(1) — Constant Time
 
 Definition:  
-O(1) means the amount of work performed by an algorithm does not increase as the input size n increases. It performs a fixed/constant amount of work.
+O(1) simply means that the algorithm takes the same number of steps no
+matter how much data there is. In this case, reading from an array always
+takes just one step no matter how much data the array contains
 
 Example — Accessing an array element:  
 ```javascript
@@ -18,14 +20,18 @@ So:
 1,000,000 elements → O(1)
 ```
 
-O(1) simply means that the algorithm takes the same number of steps no
-matter how much data there is. In this case, reading from an array always
-takes just one step no matter how much data the array contains
+
 
 ### O(n) — Linear Time
 
 Definition:
-O(n) means the amount of work performed by an algorithm increases proportionally with the input size n. If the input becomes larger, the algorithm may need to perform more operations.
+ For N elements in the array, linear search can
+take up to a maximum of N steps.
+The appropriate way to express this in Big O Notation is:
+O(N)
+I pronounce this as “Oh of N.”
+O(N) is the “Big O” way of saying that for N elements inside an array, the
+algorithm would take N steps to complete. It’s that simple.
 
 Example — Searching an array:
 ```javascript
@@ -58,10 +64,4 @@ Easy memory trick:
 O(1) → fixed work
 O(n) → work follows n
 ```
- For N elements in the array, linear search can
-take up to a maximum of N steps.
-The appropriate way to express this in Big O Notation is:
-O(N)
-I pronounce this as “Oh of N.”
-O(N) is the “Big O” way of saying that for N elements inside an array, the
-algorithm would take N steps to complete. It’s that simple.
+
