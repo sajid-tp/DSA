@@ -18,6 +18,10 @@ So:
 1,000,000 elements → O(1)
 ```
 
+O(1) simply means that the algorithm takes the same number of steps no
+matter how much data there is. In this case, reading from an array always
+takes just one step no matter how much data the array contains
+
 ### O(n) — Linear Time
 
 Definition:
