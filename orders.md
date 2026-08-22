@@ -58,3 +58,10 @@ Easy memory trick:
 O(1) → fixed work
 O(n) → work follows n
 ```
+ For N elements in the array, linear search can
+take up to a maximum of N steps.
+The appropriate way to express this in Big O Notation is:
+O(N)
+I pronounce this as “Oh of N.”
+O(N) is the “Big O” way of saying that for N elements inside an array, the
+algorithm would take N steps to complete. It’s that simple.
